@@ -79,7 +79,7 @@ def processUrlMP3():
 
                 # saving our file name into a variable file_name
                 # adding file_name into file_names list
-                file_name = new_file.split("\\")
+                file_name = new_file.split("/")
                 file_name = file_name[-1]
                 file_names.append(file_name)
 
