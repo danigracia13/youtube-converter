@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube to MP3 Downloader</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!--Add Favicon-->
+    <link rel="icon" type="image/png" href="static/images/favicon.png" sizes="16x16">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <div class="header" name="header">
+        <h1>Youtube Converter</h1>
+        <div class="menu" name="menu">
+            <ul class="menu-list">
+                <li><a href="/">MP3</a></li>
+                <li><a href="/mp4">MP4</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="title" name="title">
+        <h1>Convert YouTube videos to MP4 for free</h1>
+        <h2>Youtube Converter MP4 - Convert Youtube videos to MP4 files easily</h2>
+        <h2>Ad-Free Page</h2>
+    </div>
+
+    <div class="container">
+        <form action="processUrlMP4" method="post" name="url">
+            <input type="url" name="url" id="url" placeholder="Enter the YouTube video URL" requiered="true">
+            <input class="button" id="url_submit" name="url_submit" type="submit" value="Start"/>
+        </form>
+        <div name="download">
+            <p class="normal-text">{{ file_name }}</p>
+            <a class="button" href="/download/{{  file_name }}" download="{{ file_name }}"><i class="fa fa-download"></i> Download</a>
+        </div>
+    </div>
+    <footer>
+        <p>Dani Gracia 2021 &copy;</p>
+    </footer>
+</body>
+</html>
