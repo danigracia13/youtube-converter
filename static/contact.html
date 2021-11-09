@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!--Add Favicon-->
+    <link rel="icon" type="image/png" href="static/images/favicon.png" sizes="16x16">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="header" name="header">
+        <h1>Youtube Converter</h1>
+        <div class="menu" name="menu">
+            <ul class="menu-list">
+                <li><a href="/">MP3</a></li>
+                <li><a href="/mp4">MP4</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="title" name="title">
+        <h1>Contact</h1>
+    </div>
+
+    <div class="container" name="title" style="text-align: left;">
+        <form action="/contactForm" method="post" enctype="text/plain" name="contact_form">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="ex. Jhon" requiered="true"><br>
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" placeholder="ex. Conor" requiered="true"><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="ex. jhonconor@email.com" requiered="true">
+            <label for="message">Your Message:</label>
+            <textarea name="message" id="message" placeholder="Your suggestions, comments..." style="height:200px" requiered="true"></textarea>
+            <input class="button" id="form_submit" name="form_submit" type="submit" value="Send" />
+        </form>
+    </div>
+    <footer style="position: relative;">
+        <p>Dani Gracia 2021 &copy;</p>
+    </footer>
+</body>
+
+</html>

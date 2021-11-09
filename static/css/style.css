@@ -1,0 +1,103 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(49, 49, 49);
+}
+
+h1 {
+    color:rgb(49, 49, 49);
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+input, textarea{
+    width: 100%;
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 20px;
+    padding: 12px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.menu {
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+}
+
+.menu-list {
+    width: 17%;
+    list-style-type: none;
+    margin: 0 41% 0 42%;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(49, 49, 49);
+}
+
+li {
+    float: left;
+  }
+  
+  li a {
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+.normal-text {
+    font-size: 20px;
+}
+
+.error-text {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+.header {
+    background-color: rgb(0, 255, 191);
+    color: rgb(49, 49, 49);
+    padding: 10px 0px 0px 0px;
+}
+
+.container {
+    margin: 0 10%;
+    padding: 20px;
+    border:5px solid rgb(49, 49, 49);
+    border-radius: 15px;
+}
+
+.button {
+    background-color: rgb(49, 49, 49);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+.button:hover {
+    background-color: #111;
+}
+
+footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+label {
+    font-size: 20px;
+}

@@ -1,0 +1,5 @@
+Python 3.0 or higher
+
+pip3 install --upgrade pip
+pip3 install Flask
+pip3 install Pytube
