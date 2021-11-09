@@ -28,7 +28,7 @@ input, textarea{
 .menu-list {
     width: 17%;
     list-style-type: none;
-    margin: 0 41% 0 42%;
+    margin: 0 41%;
     padding: 0;
     overflow: hidden;
     background-color: rgb(49, 49, 49);
@@ -100,4 +100,20 @@ footer {
 
 label {
     font-size: 20px;
+}
+
+@media only screen and (max-height: 900px) {
+    footer {
+        position: relative;
+        padding: 10px 10px 0px 10px;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .menu-list {
+        width: 50%;
+        margin: 0 25%;
+    }
 }
