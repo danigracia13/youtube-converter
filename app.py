@@ -6,15 +6,13 @@ import os
 import time
 import pathlib
 from zipfile import ZipFile
-from pytube import YouTube, Playlist
-import re
-import platform
 
-sistema = platform.system()
-if sistema == "Windows":
-    spliters = "\\"
-else:
-    spliters = "/"
+# Try to import pytube and re, if error, install it
+try:
+    from pytube import YouTube, Playlist
+    import re
+except ImportError:
+    os.system("pip install pytube")
 
 app = Flask(__name__)
 
@@ -81,7 +79,7 @@ def processUrlMP3():
 
                 # saving our file name into a variable file_name
                 # adding file_name into file_names list
-                file_name = new_file.split(spliters)
+                file_name = new_file.split("\\" or "/")
                 file_name = file_name[-1]
                 file_names.append(file_name)
 
@@ -114,7 +112,7 @@ def processUrlMP3():
                 exit
 
             # saving our file name into a variable file_name
-            file_name = new_file.split("spliters)
+            file_name = new_file.split("\\" or "/")
             file_name = file_name[-1]
 
             return render_template("download_mp3_template.html", file_name=file_name)
@@ -139,10 +137,9 @@ def processUrlMP4():
     except:
         return render_template("error_template.html", processUrl="/processUrlMP4", MPx="MP4")
 
-'''@app.route("/contactForm", methods=["GET", "POST"])
+@app.route("/contactForm", methods=["GET", "POST"])
 def contactForm():
-    name = request.form.get("name")
-    print (name)'''
+    return app.send_static_file("contact.html")
 
 # Function for downloading
 @app.route("/download/<path:filename>", methods=["GET", "POST"])
@@ -150,8 +147,12 @@ def download(filename):
     return send_from_directory(directory="download", path=filename)
 
 
-# Running the app in a non-privilege computer
-app.run()
-
 # Running the app in a admin-privilege computer
-#app.run(host="0.0.0.0", port=80)
+try:
+    app.run(host="0.0.0.0", port=80)
+
+# Running the app in a non-privilege computer
+except:
+    app.run()
+
+
