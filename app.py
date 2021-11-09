@@ -6,13 +6,15 @@ import os
 import time
 import pathlib
 from zipfile import ZipFile
+from pytube import YouTube, Playlist
+import re
+import platform
 
-# Try to import pytube and re, if error, install it
-try:
-    from pytube import YouTube, Playlist
-    import re
-except ImportError:
-    os.system("pip install pytube")
+sistema = platform.system()
+if sistema == "Windows":
+    spliters = "\\"
+else:
+    spliters = "/"
 
 app = Flask(__name__)
 
@@ -79,7 +81,7 @@ def processUrlMP3():
 
                 # saving our file name into a variable file_name
                 # adding file_name into file_names list
-                file_name = new_file.split("\\" or "/")
+                file_name = new_file.split(spliters)
                 file_name = file_name[-1]
                 file_names.append(file_name)
 
@@ -112,7 +114,7 @@ def processUrlMP3():
                 exit
 
             # saving our file name into a variable file_name
-            file_name = new_file.split("\\" or "/")
+            file_name = new_file.split("spliters)
             file_name = file_name[-1]
 
             return render_template("download_mp3_template.html", file_name=file_name)
