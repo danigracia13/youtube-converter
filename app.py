@@ -79,7 +79,7 @@ def processUrlMP3():
 
                 # saving our file name into a variable file_name
                 # adding file_name into file_names list
-                file_name = new_file.split("\\")
+                file_name = new_file.split("\\" or "/")
                 file_name = file_name[-1]
                 file_names.append(file_name)
 
@@ -112,7 +112,7 @@ def processUrlMP3():
                 exit
 
             # saving our file name into a variable file_name
-            file_name = new_file.split("\\")
+            file_name = new_file.split("\\" or "/")
             file_name = file_name[-1]
 
             return render_template("download_mp3_template.html", file_name=file_name)
@@ -149,7 +149,7 @@ def download(filename):
 
 
 # Running the app in a non-privilege computer
-#app.run()
+app.run()
 
 # Running the app in a admin-privilege computer
-app.run(host="0.0.0.0", port=80)
+#app.run(host="0.0.0.0", port=80)
